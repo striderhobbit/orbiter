@@ -1,0 +1,4 @@
+<button *ngIf="!this.subscription" type="button" (click)="subscribe()">Subscribe</button>
+<button *ngIf="this.subscription" type="button" (click)="unsubscribe()">Unsubscribe</button>
+<button *ngIf="messageService.messages.length" type="button" (click)="messageService.clear()">Clear</button>
+<pre><p *ngFor="let message of messageService.messages">{{message}}</p></pre>

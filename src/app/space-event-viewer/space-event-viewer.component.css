@@ -1,0 +1,25 @@
+:host {
+    display       : flex;
+    flex-direction: column;
+}
+
+svg.space-event-viewer {
+    border: 1px solid black;
+    width : 70vmin;
+}
+
+svg.space-event-viewer marker#arrow-head,
+svg.space-event-viewer>path,
+svg.space-event-viewer>.space-event>circle {
+    fill        : blue;
+    stroke      : blue;
+    stroke-width: .5;
+}
+
+svg.space-event-viewer>path {
+    fill: none;
+}
+
+svg.space-event-viewer>.space-event>circle {
+    fill: white;
+}

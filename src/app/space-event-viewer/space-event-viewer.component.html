@@ -1,0 +1,14 @@
+<button *ngIf="!this.subscription" type="button" (click)="subscribe()">Subscribe</button>
+<button *ngIf="this.subscription" type="button" (click)="unsubscribe()">Unsubscribe</button>
+<svg class="space-event-viewer" viewBox="0 0 100 100">
+    <defs>
+        <marker id="arrow-head" markerWidth="13" markerHeight="10" refX="13" refY="5" orient="auto">
+            <path d="M2,2 L2,8 L11,5 Z" stroke-width="1"></path>
+        </marker>
+    </defs>
+    <path [attr.d]="path" marker-end="url(#arrow-head)"></path>
+    <g class="space-event" *ngFor="let spaceEvent of spaceEvents, index as i">
+        <circle [attr.cx]="spaceEvent.x" [attr.cy]="spaceEvent.y" r="1"></circle>
+        <title>{{i + 1}} - {{spaceEvent.toString()}}</title>
+    </g>
+</svg>
